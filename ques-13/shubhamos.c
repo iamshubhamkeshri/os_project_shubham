@@ -94,10 +94,10 @@ int main()
 		int j;
 	    for(j=0;j<k[1];j++)
 		{
-		 	printf("\n",fifo[j].P_ID);
-			 printf("\t",fifo[j].prio);printf("\t\t",fifo[j].AT);
-			 printf("\t",fifo[j].BT);
-			 printf("\n");
+		 	printf("\n%d",fifo[j].P_ID);
+			 printf("\t%d",fifo[j].prio);printf("\t\t",fifo[j].AT);
+			 printf("\t%d",fifo[j].BT);
+			 printf("\n%d");
 		}
     }
 	printf("\nQUEUE2---Middle priority range Queue (",k[2]);
@@ -109,10 +109,10 @@ int main()
 	    printf("PID | Priority | ARRIVAL Time | Burst Time\n");
 		for( j=0;j<k[2];j++)
 	    {
-		 	printf(" ",ps[j].P_ID);
-		 	 printf("\t",ps[j].prio);
-		 	 printf("\t\t",ps[j].AT);
-		 	 printf("\t",ps[j].BT);
+		 	printf(" %d",ps[j].P_ID);
+		 	 printf("\t%d",ps[j].prio);
+		 	 printf("\t\t%d",ps[j].AT);
+		 	 printf("\t%d",ps[j].BT);
 		}
 	} 
 	printf("\n\nQUEUE3---Highest priority range Queue  (",k[3]);
@@ -124,10 +124,10 @@ int main()
 		printf("PID | Priority | ARRIVAL Time | Burst Time\n");
 		for( j=0;j<k[3];j++)
 		 {
-		 	 printf("rr[j].P_ID");
-		 	 printf("\t",rr[j].prio);
-		 	 printf("\t\t",rr[j].AT);
-		 	 printf("\t",rr[j].BT);
+		 	 printf("%d",rr[j].P_ID);
+		 	 printf("\t%d",rr[j].prio);
+		 	 printf("\t\t%d",rr[j].AT);
+		 	 printf("\t%d",rr[j].BT);
 		}	
 	}  
 	int o=0;
@@ -255,8 +255,8 @@ int main()
 					      remtime=h-e;
 						  fifo[pro].BT=remtime;		   
              		   	  printf("\tQUEUE1\tp",fifo[pro].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(e));
+	   					  printf( "process from%d ",t);
+	   					  printf("---(sec/n)%d",(e));
              		   	  t=e;
              		   	  break;
 						}
@@ -264,8 +264,8 @@ int main()
 					    {
 					     
 					     printf("\tQUEUE1\tp",fifo[pro].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(t+remtime));
+	   					  printf( "process from %d",t);
+	   					  printf("---(sec/n)%d",(t+remtime));
 					     flag[pro]=0;
 					     t+=remtime;
 					     fifo[pro].BT=0;
@@ -274,8 +274,8 @@ int main()
 					   {
 					   	  
 					   	  printf("\tQUEUE1\tp",fifo[pro].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(t+10));
+	   					  printf( "process from %d",t);
+	   					  printf("---(sec/n)%d",(t+10));
 					   	  t=t+10;
 					      fifo[pro].BT-=10;
 					   }   
@@ -335,8 +335,8 @@ int main()
 					      remtime=h-e;
 						  ps[pro1].BT=remtime;		   
              		   	  printf("\tQUEUE2\tp",ps[pro1].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(e));
+	   					  printf( "process from %d",t);
+	   					  printf("---(sec/n)%d",(e));
              		   	  t=e;
              		   	  break;
              		   	
@@ -346,8 +346,8 @@ int main()
 					   {
 					     
 					     printf("\tQUEUE2\tp",ps[pro1].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(t+remtime));
+	   					  printf( "process from %d",t);
+	   					  printf("---(sec/n)%d",(t+remtime));
 					     flag1[pro1]=0;
 					     t+=remtime;
 					     ps[pro1].BT=0;
@@ -356,8 +356,8 @@ int main()
 					   {
 					   	  
 					   	  printf("\tQUEUE2\tp",ps[pro1].P_ID);
-	   					  printf( "process from ",t);
-	   					  printf("---(sec/n)",(t+10));
+	   					  printf( "process from %d",t);
+	   					  printf("---(sec/n)%d",(t+10));
 					      ps[pro1].BT-=10;
 					      t=t+10;
 					   }    	    
@@ -418,16 +418,16 @@ int main()
 	                 		remtime=h-e; 
 	                 		rr[pro2].BT=remtime;
 	                 		printf("\tQUEUE3\tp",rr[pro2].P_ID);
-	   						printf( "process from ",t);
-	   						printf("---(sec/n)",(e));
+	   						printf( "process from%d ",t);
+	   						printf("---(sec/n)%d",(e));
 	                 		t=e;
 	                  		break;
 	           			}    
 	           			else if(remtime<=timeq)
 	            		{   	 
 	                    	printf("\tQUEUE3\tp",rr[pro2].P_ID);
-	   						printf( "process from ",t);
-	   						printf("---(sec/n)",(t+remtime));
+	   						printf( "process from %d",t);
+	   						printf("---(sec/n)%d",(t+remtime));
 	                    	t+=remtime;
 	                    	rr[pro2].BT=0;
 		                	flag2[pro2]=0;
@@ -435,8 +435,8 @@ int main()
 	                    else
 	  					{	
 	   						 printf("\tQUEUE3\tp",rr[pro2].P_ID);
-	   						 printf( "process from ",t);
-	   						 printf("---(sec/n)",(t+timeq));
+	   						 printf( "process from%d ",t);
+	   						 printf("---(sec/n)%d",(t+timeq));
 	     					 rr[pro2].BT-=timeq;
 	     					 t+=timeq;
        					}
@@ -467,14 +467,14 @@ for(j=0;j<k[1];j++)
     printf("\n\nQUEUE1:p",fifo[j].P_ID);
     if(j!=0){
 
-		printf("\nWaiting Time(sec/n)\t=",(fifo[j].WT-fifo[j-1].AT-fifo[j].AT));
-		printf("Turnaround time(sec\n)\t=",((fifo[j].WT-fifo[j-1].AT-fifo[j].AT)+fifosave[j]));
+		printf("\nWaiting Time(sec/n)\t=%d",(fifo[j].WT-fifo[j-1].AT-fifo[j].AT));
+		printf("Turnaround time(sec\n)\t=%d",((fifo[j].WT-fifo[j-1].AT-fifo[j].AT)+fifosave[j]));
 		avg_wt+=(fifo[j].WT-fifo[j-1].AT-fifo[j].AT);
 		avg_tt+=((fifo[j].WT-fifo[j-1].AT-fifo[j].AT)+fifosave[j]);
 		}
 		else{
-		printf("Waiting Time(sec/n)\t=",(fifo[j].WT));
-		printf("Turnaround time(sec\n)\t=",(fifo[j].WT+fifosave[j]));
+		printf("Waiting Time(sec/n)\t=%d",(fifo[j].WT));
+		printf("Turnaround time(sec\n)\t=%d",(fifo[j].WT+fifosave[j]));
 		avg_wt+=(fifo[j].WT);
 		avg_tt+=(fifo[j].WT+fifosave[j]);
 		}
@@ -484,14 +484,14 @@ for(j=0;j<k[2];j++)
     printf("\n\nQUEUE2:p",ps[j].P_ID);
     if(j!=0){
 
-		printf("\nWaiting Time(sec/n)\t=",(ps[j].WT-ps[j-1].AT-ps[j].AT));
-		printf("Turnaround time(sec\n)\t=",((ps[j].WT-ps[j-1].AT-ps[j].AT)+pssave[j]));
+		printf("\nWaiting Time(sec/n)\t=%d",(ps[j].WT-ps[j-1].AT-ps[j].AT));
+		printf("Turnaround time(sec\n)\t=%d",((ps[j].WT-ps[j-1].AT-ps[j].AT)+pssave[j]));
 		avg_wt+=(ps[j].WT-ps[j-1].AT-ps[j].AT);
 		avg_tt+=((ps[j].WT-ps[j-1].AT-ps[j].AT)+pssave[j]);
 		}
 		else{
-		printf("Waiting Time(sec/n)\t=",(ps[j].WT));
-		printf("Turnaround time(sec/n)\t=",(ps[j].WT+pssave[j]));
+		printf("Waiting Time(sec/n)\t=%d",(ps[j].WT));
+		printf("Turnaround time(sec/n)\t=%d",(ps[j].WT+pssave[j]));
 		avg_wt+=(ps[j].WT);
 		avg_tt+=(ps[j].WT+pssave[j]);
 		}
@@ -502,20 +502,20 @@ for( j=0;j<k[3];j++)
     if(j!=0)
 	{
 
-		printf("/nWaiting Time(sec/n)\t=",(rr[j].WT-rr[j-1].AT-rr[j].AT));
-		printf("Turnaround time(sec/n)\t=",((rr[j].WT-rr[j-1].AT-rr[j].AT)+rrsave[j]));
+		printf("/nWaiting Time(sec/n)\t=%d",(rr[j].WT-rr[j-1].AT-rr[j].AT));
+		printf("Turnaround time(sec/n)\t=%d",((rr[j].WT-rr[j-1].AT-rr[j].AT)+rrsave[j]));
 		avg_wt+=(rr[j].WT-rr[j-1].AT-rr[j].AT);
 		avg_tt+=((rr[j].WT-rr[j-1].AT-rr[j].AT)+rrsave[j]);
 		}
 		else{
-		printf("Waiting Time(sec/n)\t=",(rr[j].WT));
-		printf("Turnaround time(sec/n)\t=",(rr[j].WT+rrsave[j]));
+		printf("Waiting Time(sec/n)\t=%d",(rr[j].WT));
+		printf("Turnaround time(sec/n)\t=%d",(rr[j].WT+rrsave[j]));
 		avg_wt+=(rr[j].WT);
 		avg_tt+=(rr[j].WT+rrsave[j]);
 		}
 }
-printf("\nAverage waiting time (sec\n)): ",(avg_wt/n));
-printf("\nAverage Turnaround time (sec\n): ",(avg_tt/n));
+printf("\nAverage waiting time (sec\n)):%d ",(avg_wt/n));
+printf("\nAverage Turnaround time (sec\n):%d ",(avg_tt/n));
 printf("THE PROGRAM IS OVER");
 return 0;
 }
